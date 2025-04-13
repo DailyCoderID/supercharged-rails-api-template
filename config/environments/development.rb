@@ -90,4 +90,7 @@ Rails.application.configure do
       "#{msg}\n"
     end
   end
+
+  # Allow requests from codespace subdomains
+  config.hosts << /.*\.github\.dev/
 end
