@@ -140,7 +140,7 @@ GEM
       kramdown (~> 2.0)
     language_server-protocol (3.17.0.4)
     lint_roller (1.1.0)
-    logger (1.6.6)
+    logger (1.7.0)
     lograge (0.14.0)
       actionpack (>= 4)
       activesupport (>= 4)
@@ -194,7 +194,7 @@ GEM
     pp (0.6.2)
       prettyprint
     prettyprint (0.2.0)
-    prism (1.3.0)
+    prism (1.4.0)
     psych (5.2.3)
       date
       stringio
@@ -245,7 +245,7 @@ GEM
       zeitwerk (~> 2.6)
     rainbow (3.1.1)
     rake (13.2.1)
-    rbs (3.8.1)
+    rbs (3.9.2)
       logger
     rdoc (6.12.0)
       psych (>= 4.0.0)
@@ -317,7 +317,7 @@ GEM
     rubocop-rspec (3.5.0)
       lint_roller (~> 1.1)
       rubocop (~> 1.72, >= 1.72.1)
-    ruby-lsp (0.23.11)
+    ruby-lsp (0.23.16)
       language_server-protocol (~> 3.17.0)
       prism (>= 1.2, < 2.0)
       rbs (>= 3, < 4)
@@ -354,7 +354,7 @@ GEM
       tilt (~> 2.0)
       yard (~> 0.9, >= 0.9.24)
       yard-solargraph (~> 0.1)
-    sorbet-runtime (0.5.11906)
+    sorbet-runtime (0.5.12048)
     spring (4.2.1)
     stringio (3.1.5)
     thor (1.3.2)
