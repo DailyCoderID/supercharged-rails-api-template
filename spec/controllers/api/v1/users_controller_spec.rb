@@ -10,7 +10,7 @@ RSpec.describe Api::V1::UsersController, type: :controller do
 
     context "when authenticated user requests their own data" do
       let!(:user) { create(:user, username: "testuser", name: "Test User") }
-      let(:token) { JWT.encode({ username: user.username }, jwt_secret) }
+      let(:token) { JWT.encode({ username: user.username }, jwt_secret, "HS256") }
 
       before do
         request.headers["Authorization"] = "Bearer #{token}"
@@ -57,7 +57,7 @@ RSpec.describe Api::V1::UsersController, type: :controller do
 
     context "when a user with the username from the token does not exist" do
       before do
-        invalid_token = JWT.encode({ username: "nonexistentuser" }, jwt_secret)
+        invalid_token = JWT.encode({ username: "nonexistentuser" }, jwt_secret, "HS256")
         request.headers["Authorization"] = "Bearer #{invalid_token}"
       end
 

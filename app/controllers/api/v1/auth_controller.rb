@@ -30,7 +30,7 @@ module Api
           exp: 2.hours.from_now.to_i # Token expires in 24 hours
         }
 
-        JWT.encode(payload, ENV.fetch("JWT_SECRET_KEY", nil))
+        JWT.encode(payload, ENV.fetch("JWT_SECRET_KEY", nil), "HS256")
       end
     end
   end

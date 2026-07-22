@@ -1,7 +1,7 @@
-FROM mcr.microsoft.com/devcontainers/ruby:3.3
+FROM mcr.microsoft.com/devcontainers/ruby:4.0
 
 # Install Rails
-RUN gem install rails -v 7.2.1
+RUN gem install rails -v 8.1.3
 
 # Install dependencies for building native extensions
 RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \

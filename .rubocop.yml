@@ -1,11 +1,11 @@
-require: rubocop-rails
 plugins:
+- rubocop-rails
 - rubocop-performance
 - rubocop-rspec
 
 AllCops:
   NewCops: enable
-  TargetRubyVersion: 3.3
+  TargetRubyVersion: 4.0
   Exclude:
     - 'db/**/*'
     - 'config/**/*'
