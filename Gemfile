@@ -19,9 +19,8 @@ gem "connection_pool", ">= 2.5"
 gem "dotenv-rails"
 # Redis client for hiredis
 gem "hiredis-client"
-# For JWT authentication (pinned to 2.x; jwt 3.0 changes encode/decode API and
-# needs an auth-code migration — tracked as a separate follow-up)
-gem "jwt", "~> 2.10"
+# For JWT authentication
+gem "jwt", "~> 3.0"
 # Use an opinionated customizable logging library
 gem "lograge"
 # Use mysql as the database for Active Record

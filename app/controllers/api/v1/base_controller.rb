@@ -21,7 +21,7 @@ module Api
         token = request.headers["Authorization"]&.split&.last
         return render_unauthorized_access unless token
 
-        decoded_token = JWT.decode(token, ENV.fetch("JWT_SECRET_KEY", nil))
+        decoded_token = JWT.decode(token, ENV.fetch("JWT_SECRET_KEY", nil), true, algorithm: "HS256")
         @current_user = User.find_by(username: decoded_token.first["username"])
 
         render_unauthorized_access unless @current_user
