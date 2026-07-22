@@ -1,8 +1,8 @@
 # Rails Microservice
 
 A Ruby on Rails API-only microservice with the following specifications:
-- Rails 7.2.1
-- Ruby 3.3.0
+- Rails 8.1.3
+- Ruby 4.0.6
 - MySQL 8.0.40
 - Redis 7.0
 
@@ -17,8 +17,8 @@ This project is configured to work with GitHub Codespaces, which provides a comp
 3. Click "Create codespace on main"
 
 The codespace will automatically:
-- Set up a development container with Ruby 3.3.0
-- Install Rails 7.2.1
+- Set up a development container with Ruby 4.0.6
+- Install Rails 8.1.3
 - Set up MySQL 8.0.40 and Redis 7.0
 - Install all the necessary extensions for VS Code
 - Run `bundle install` to install all dependencies
