@@ -51,9 +51,10 @@ Rails.application.configure do
   config.logger = ActiveSupport::Logger.new(STDOUT)
   config.logger.formatter = proc do |severity, timestamp, progname, msg|
     if msg.is_a?(String) && msg.start_with?("CUSTOM_LOG:")
-      # When CUSTOM_LOG - parse only the JSON part
-      msg.sub!("CUSTOM_LOG:", "")
-      parsed_msg = JSON.parse(msg) rescue msg
+      # When CUSTOM_LOG - parse only the JSON part. Use non-mutating `sub` so we
+      # never write to a (possibly frozen) string handed to us by the logger.
+      json_part = msg.sub("CUSTOM_LOG:", "")
+      parsed_msg = JSON.parse(json_part) rescue json_part
 
       {
         time: timestamp,
