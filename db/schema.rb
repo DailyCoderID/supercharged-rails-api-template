@@ -10,13 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.2].define(version: 2025_02_01_085053) do
+ActiveRecord::Schema[8.1].define(version: 2025_02_01_085053) do
   create_table "users", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
-    t.string "username", limit: 20, null: false
-    t.string "password_digest", null: false
-    t.string "name", limit: 30, null: false
     t.datetime "created_at", null: false
+    t.string "name", limit: 30, null: false
+    t.string "password_digest", null: false
     t.datetime "updated_at", null: false
+    t.string "username", limit: 20, null: false
     t.index ["username"], name: "index_users_on_username", unique: true
   end
 end
