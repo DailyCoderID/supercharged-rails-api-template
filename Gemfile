@@ -13,14 +13,15 @@ gem "ostruct"
 gem "bcrypt"
 # Reduces boot times through caching; required in config/boot.rb
 gem "bootsnap", require: false
-# Job queue/processor
-gem "connection_pool", "~> 2.4.1"
+# Job queue/processor (Sidekiq 8.1 requires connection_pool >= 3.0)
+gem "connection_pool", ">= 2.5"
 # Environment Variables
 gem "dotenv-rails"
 # Redis client for hiredis
 gem "hiredis-client"
-# For JWT authentication
-gem "jwt"
+# For JWT authentication (pinned to 2.x; jwt 3.0 changes encode/decode API and
+# needs an auth-code migration — tracked as a separate follow-up)
+gem "jwt", "~> 2.10"
 # Use an opinionated customizable logging library
 gem "lograge"
 # Use mysql as the database for Active Record

@@ -54,7 +54,7 @@ module Api
             message: error.message,
             details: error.record.errors.full_messages
           }
-        }, status: :unprocessable_entity
+        }, status: :unprocessable_content
       end
 
       def render_internal_server_error(error)
